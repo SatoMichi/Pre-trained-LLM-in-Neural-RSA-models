@@ -84,7 +84,7 @@ class RNN_Speaker(nn.Module):
             outputs, states = self.gru(inputs, states)  # outputs: (L=1,B,H)
             outputs = outputs.squeeze()                 # outputs: (B,H)
             outputs = self.outputs2vocab(outputs)       # outputs: (B,V)
-            predicted_onehot = F.gumbel_softmax(outputs, tau=tau, hard=True)    # (B,V)
+            predicted_onehot = F.softmax(outputs, dim=-1)    # (B,V)
             lang.append(predicted_onehot.unsqueeze(1))
             inputs = (predicted_onehot.unsqueeze(0)) @ self.embedding.weight    # (1, batch_size, n_vocab) X (n_vocab, h) -> (1, batch_size, h)
             
