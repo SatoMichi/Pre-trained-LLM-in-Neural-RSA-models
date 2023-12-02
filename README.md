@@ -1,5 +1,5 @@
 # <font color="green">Pre-trained-LLM-in-Neural-RSA-models</font>
-This is an repository(file) containing all the code(and possiblly data) used for the Thesis Project.
+This is an repository containing all the code(and possiblly data) used for the Thesis Project for Advanced Computer Science Course.
 
 # Repository structure
 The repository consist of *data* folder which include the data and related scripts used for training of the model, and *experiments* folders which includes codes for experiments we did. The **Experiment01** include the codes for experiments about literal listener models, **Experiment02** include the codes for experiments about literal speaker models, and **Expeirments03** include the codes for experiments about pre-trained large language models and training data size. Note that the other experiments done and stated in the report (for exapmple code for CS-CNN, etc) are included in the folder **Other_Experiments**. In addition, the other experiments codes which is not stated in the report(for example codes tried to construct the amortized models stated in the appendix) are in the **Other**.
